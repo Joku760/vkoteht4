@@ -1,9 +1,10 @@
-
 public class MyApp 
 {
 	public static void main(String[] args) 
 	{
+
 	Product product = new Product("Edam", 3.3, 120);
+        product.changePrice(4.1);
 	System.out.println("Product value is " + product.countValue());
 	product.printProduct();
 	product.changeAmount(245);
@@ -31,9 +32,14 @@ class Product
 		System.out.printf("Product %s, price %4.1f and balance %d pcs",
 		name,price,amount);
 	}
-	public double changeAmount(newvalue)
+	public void changeAmount(newvalue)
 	{
-		return amount;
+		 amount = newvalue;
 	}
+  public void changePrice(double newPrice)
+{
+    price = newPrice;
+}
+
 }
 
